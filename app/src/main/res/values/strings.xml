@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Healthy Fur</string>
+    <string name="transaksi_grooming">Transaksi Grooming</string>
+    <string name="nama_pelanggan">Nama pelanggan</string>
+    <string name="nomor_telepon">Nomor telepon</string>
+    <string name="nama_hewan">Nama hewan</string>
+    <string name="jenis_hewan">Jenis hewan</string>
+    <string name="anjing">Anjing</string>
+    <string name="kucing">Kucing</string>
+    <string name="ras">Ras</string>
+    <string name="warna_hewan">Warna hewan</string>
+    <string name="berat_hewan_kg">Berat hewan (kg)</string>
+    <string name="jenis_layanan">Jenis layanan</string>
+    <string name="tambah">Tambah</string>
+    <string name="batal">Batal</string>
 </resources>
