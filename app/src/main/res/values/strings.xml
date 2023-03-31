@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Healthy Fur</string>
     <string name="transaksi_grooming">Transaksi Grooming</string>
     <string name="nama_pelanggan">Nama pelanggan</string>
@@ -13,4 +13,55 @@
     <string name="jenis_layanan">Jenis layanan</string>
     <string name="tambah">Tambah</string>
     <string name="batal">Batal</string>
+
+    <string-array name="array_ras_anjing">
+        <item>Beagle</item>
+        <item>Bulldog</item>
+        <item>Dachshund</item>
+        <item>Domestik</item>
+        <item>German Shepherd</item>
+        <item>Golden Retriever</item>
+        <item>Labrador</item>
+        <item>Pudel</item>
+        <item>Rottweiler</item>
+    </string-array>
+
+    <string-array name="array_ras_kucing">
+        <item>Anggora</item>
+        <item>Beagle</item>
+        <item>Bengal</item>
+        <item>British Shorthair</item>
+        <item>Domestik</item>
+        <item>Maine Coon</item>
+        <item>Persia</item>
+        <item>Ragdoll</item>
+        <item>Siamese</item>
+        <item>Sphinx</item>
+    </string-array>
+
+    <string-array name="array_jenis_layanan">
+        <item>Grooming sehat</item>
+        <item>Grooming kutu</item>
+        <item>Grooming jamur</item>
+        <item>Grooming lengkap</item>
+    </string-array>
+
+    <string name="nama_pelanggan_invalid">Nama pelanggan tidak boleh kosong.</string>
+    <string name="nomor_telepon_invalid">Nomor telepon tidak boleh kosong.</string>
+    <string name="nama_hewan_invalid">Nama hewan tidak boleh kosong.</string>
+    <string name="jenis_hewan_invalid">Jenis hewan tidak boleh kosong.</string>
+    <string name="ras_invalid">Ras tidak boleh kosong.</string>
+    <string name="warna_invalid">Warna tidak boleh kosong.</string>
+    <string name="berat_hewan_invalid">Berat hewan tidak boleh kosong.</string>
+    <string name="jenis_layanan_invalid">Jenis layanan tidak boleh kosong.</string>
+
+    <string name="nama_pelanggan_x">Nama pelanggan: %1$s</string>
+    <string name="nama_hewan_x">Nama hewan: %1$s</string>
+    <string name="jenis_hewan_x">Jenis hewan: %1$s</string>
+    <string name="berat_hewan_x" tools:ignore="ExtraTranslation">Berat hewan: %1$s kg</string>
+    <string name="jenis_layanan_x" tools:ignore="ExtraTranslation">Jenis layanan: %1$s</string>
+    <string name="durasi_x" tools:ignore="ExtraTranslation">Durasi: %1$s</string>
+    <string name="biaya_x" tools:ignore="ExtraTranslation">Biaya: %1$s</string>
+
+
 </resources>

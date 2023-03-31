@@ -90,19 +90,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/jenis_hewan"
-            app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+            app:layout_constraintBottom_toBottomOf="@+id/radioGroupJenis"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+            app:layout_constraintTop_toTopOf="@+id/radioGroupJenis" />
 
         <RadioGroup
-            android:id="@+id/radioGroup"
+            android:id="@+id/radioGroupJenis"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/spinnerRas"
+            app:layout_constraintStart_toStartOf="@+id/spinnerRasKucing"
             app:layout_constraintTop_toBottomOf="@+id/namaHewan_hint">
 
             <RadioButton
@@ -110,6 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:checked="true"
                 android:text="@string/anjing" />
 
             <RadioButton
@@ -126,20 +127,33 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/ras"
-            app:layout_constraintBottom_toBottomOf="@+id/spinnerRas"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerRasKucing"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/spinnerRas" />
+            app:layout_constraintTop_toTopOf="@+id/spinnerRasKucing" />
 
         <Spinner
-            android:id="@+id/spinnerRas"
+            android:id="@+id/spinnerRasAnjing"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/spinner_background"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/spinnerJenisLayanan"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupJenis" />
+
+        <Spinner
+            android:id="@+id/spinnerRasKucing"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/spinner_background"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/spinnerJenisLayanan"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupJenis" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/warnaHewan_hint"
@@ -150,7 +164,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerRas">
+            app:layout_constraintTop_toBottomOf="@+id/spinnerRasKucing">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/warnaHewan_inp"
@@ -240,8 +254,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:text="@string/nama_pelanggan_x"
             android:textSize="18sp"
-            tools:text="Nama Pelanggan: Steven"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider" />
@@ -251,8 +266,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="@string/nama_hewan_x"
             android:textSize="18sp"
-            tools:text="Nama hewan: Moti"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvResNamaPelanggan" />
@@ -262,8 +278,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="@string/jenis_hewan_x"
             android:textSize="18sp"
-            tools:text="Jenis hewan: Kucing"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvResNamaHewan" />
@@ -273,8 +290,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="@string/berat_hewan_x"
             android:textSize="18sp"
-            tools:text="Berat hewan: 8 kg"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvResJenisHewan" />
@@ -284,8 +302,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="@string/jenis_layanan_x"
             android:textSize="18sp"
-            tools:text="Jenis layanan: Grooming sehat"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvResBeratHewan" />
@@ -295,8 +314,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="Durasi: 30 menit"
             android:textSize="18sp"
-            tools:text="Durasi: 30 menit"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvResLayanan" />
@@ -307,8 +327,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="32dp"
+            android:text="Biaya: 50.000"
             android:textSize="18sp"
-            tools:text="Biaya: 50.000"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
