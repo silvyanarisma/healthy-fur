@@ -42,7 +42,8 @@
                 android:id="@+id/namaPelanggan_inp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/nama_pelanggan" />
+                android:hint="@string/nama_pelanggan"
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -60,7 +61,8 @@
                 android:id="@+id/nomorTelepon_inp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/nomor_telepon" />
+                android:hint="@string/nomor_telepon"
+                android:inputType="phone" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -78,7 +80,8 @@
                 android:id="@+id/namaHewan_inp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/nama_hewan" />
+                android:hint="@string/nama_hewan"
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -153,7 +156,8 @@
                 android:id="@+id/warnaHewan_inp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/warna_hewan" />
+                android:hint="@string/warna_hewan"
+                android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -171,7 +175,8 @@
                 android:id="@+id/beratHewan_inp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/berat_hewan_kg" />
+                android:hint="@string/berat_hewan_kg"
+                android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
