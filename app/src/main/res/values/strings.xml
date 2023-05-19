@@ -60,8 +60,8 @@
     <string name="jenis_hewan_x">Jenis hewan: %1$s</string>
     <string name="berat_hewan_x" tools:ignore="ExtraTranslation">Berat hewan: %1$s kg</string>
     <string name="jenis_layanan_x" tools:ignore="ExtraTranslation">Jenis layanan: %1$s</string>
-    <string name="durasi_x" tools:ignore="ExtraTranslation">Durasi: %1$s</string>
-    <string name="biaya_x" tools:ignore="ExtraTranslation">Biaya: %1$s</string>
+    <string name="durasi_x" tools:ignore="ExtraTranslation">Durasi: %1$s menit</string>
+    <string name="biaya_x" tools:ignore="ExtraTranslation">Biaya: Rp %1$s</string>
 
 
 </resources>
