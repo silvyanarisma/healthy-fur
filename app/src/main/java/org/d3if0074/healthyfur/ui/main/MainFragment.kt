@@ -25,7 +25,7 @@ class MainFragment: Fragment() {
     private var biaya: Int = 0
     private var ras: String = ""
     private var jenisLayanan: String = ""
-    private var jenisHewanRg: String = ""
+    private var jenisHewanRg: String = "Anjing"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -145,26 +145,26 @@ class MainFragment: Fragment() {
     private fun tambahTransaksi() {
         val namaPelanggan = binding.namaPelangganInp.text.toString()
         if (TextUtils.isEmpty(namaPelanggan)) {
-            Toast.makeText(this.requireContext(), R.string.nama_pelanggan_invalid, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.nama_pelanggan_invalid, Toast.LENGTH_LONG).show()
             return
         }
 
 
         val nomorTelepon = binding.nomorTeleponInp.text.toString()
         if (TextUtils.isEmpty(nomorTelepon)) {
-            Toast.makeText(this.requireContext(), R.string.nomor_telepon_invalid, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.nomor_telepon_invalid, Toast.LENGTH_LONG).show()
             return
         }
 
         val namaHewan = binding.namaHewanInp.text.toString()
         if (TextUtils.isEmpty(namaHewan)) {
-            Toast.makeText(this.requireContext(), R.string.nama_hewan_invalid, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.nama_hewan_invalid, Toast.LENGTH_LONG).show()
             return
         }
 
         val jenisHewan = binding.radioGroupJenis.checkedRadioButtonId
         if (jenisHewan == -1) {
-            Toast.makeText(this.requireContext(), R.string.jenis_hewan_invalid, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.jenis_hewan_invalid, Toast.LENGTH_LONG).show()
             return
         }
 
@@ -176,19 +176,19 @@ class MainFragment: Fragment() {
 
         val warnaHewan = binding.warnaHewanInp.text.toString()
         if (TextUtils.isEmpty(warnaHewan)) {
-            Toast.makeText(this.requireContext(), R.string.warna_invalid, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.warna_invalid, Toast.LENGTH_LONG).show()
             return
         }
 
         val beratHewan = binding.beratHewanInp.text.toString()
         if (TextUtils.isEmpty(beratHewan)) {
-            Toast.makeText(this.requireContext(), R.string.berat_hewan_invalid, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.berat_hewan_invalid, Toast.LENGTH_LONG).show()
             return
         }
 
 
         if (TextUtils.isEmpty(jenisLayanan)) {
-            Toast.makeText(this.requireContext(), R.string.jenis_layanan_invalid, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.jenis_layanan_invalid, Toast.LENGTH_LONG).show()
             return
         }
         viewModel.setHasilGrooming(namaPelanggan, namaHewan, jenisHewanRg, beratHewan, jenisLayanan, durasi, biaya, ras)
