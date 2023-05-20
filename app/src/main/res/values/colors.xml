@@ -11,4 +11,8 @@
     <color name="transparant">#00000000</color>
     <color name="orange_700">#FF8400</color>
     <color name="orange_500">#FF9800</color>
+    <color name="dog">#73777B</color>
+    <color name="cat">#849561</color>
+    <color name="detail">#F99417</color>
+    <color name="delete">#E21818</color>
 </resources>

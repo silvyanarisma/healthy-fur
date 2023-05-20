@@ -63,5 +63,7 @@
     <string name="durasi_x" tools:ignore="ExtraTranslation">Durasi: %1$s menit</string>
     <string name="biaya_x" tools:ignore="ExtraTranslation">Biaya: Rp %1$s</string>
 
+    <string name="belum_ada_data">Belum ada data.</string>
+
 
 </resources>
