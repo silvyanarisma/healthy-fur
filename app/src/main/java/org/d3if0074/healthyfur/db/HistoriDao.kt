@@ -16,4 +16,7 @@ interface HistoriDao {
 
     @Query("SELECT * FROM histori ORDER BY id DESC")
     fun getHistori(): LiveData<List<HistoriEntity?>>
+
+    @Query("DELETE FROM histori")
+    fun clearAllData()
 }
