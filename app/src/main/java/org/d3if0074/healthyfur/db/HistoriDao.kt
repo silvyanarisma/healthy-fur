@@ -19,4 +19,7 @@ interface HistoriDao {
 
     @Query("DELETE FROM histori")
     fun clearAllData()
+
+    @Query("DELETE FROM histori WHERE id=:id")
+    fun clearData(id:Long)
 }

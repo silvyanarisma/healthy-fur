@@ -61,7 +61,7 @@ class HistoriFragment: Fragment() {
         MaterialAlertDialogBuilder(requireContext())
             .setMessage(R.string.konfirmasi_hapus)
             .setPositiveButton(getString(R.string.hapus)) { _, _ ->
-                viewModel.hapusData()
+                viewModel.deleteAllData()
             }
             .setNegativeButton(getString(R.string.batal)) { dialog, _ ->
                 dialog.cancel()

@@ -10,7 +10,7 @@ import org.d3if0074.healthyfur.db.HistoriDao
 class HistoriViewModel(private val db: HistoriDao) : ViewModel() {
     val data = db.getHistori()
 
-    fun hapusData() = viewModelScope.launch {
+    fun deleteAllData() = viewModelScope.launch {
         withContext(Dispatchers.IO) {
             db.clearAllData()
         }
