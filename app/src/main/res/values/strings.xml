@@ -64,6 +64,7 @@
     <string name="biaya_x" tools:ignore="ExtraTranslation">Biaya: Rp %1$s</string>
 
     <string name="belum_ada_data">Belum ada data.</string>
+    <string name="histori">Histori</string>
 
 
 </resources>

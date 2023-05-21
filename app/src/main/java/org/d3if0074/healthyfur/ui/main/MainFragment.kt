@@ -2,23 +2,28 @@ package org.d3if0074.healthyfur.ui.main
 
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import org.d3if0074.healthyfur.R
 import org.d3if0074.healthyfur.databinding.FragmentMainBinding
+import org.d3if0074.healthyfur.db.HealthyFurDb
 import org.d3if0074.healthyfur.model.HasilGrooming
+import org.d3if0074.healthyfur.ui.histori.HistoriViewModel
+import org.d3if0074.healthyfur.ui.histori.HistoriViewModelFactory
 
 class MainFragment: Fragment() {
     private lateinit var binding: FragmentMainBinding
+
     private val viewModel: MainViewModel by lazy {
-        ViewModelProvider (this)[MainViewModel::class.java]
+        val db = HealthyFurDb.getInstance(requireContext())
+        val factory = MainViewModelFactory(db.dao)
+        ViewModelProvider(this, factory)[MainViewModel::class.java]
     }
 
     private var durasi: Int = 0
@@ -27,9 +32,8 @@ class MainFragment: Fragment() {
     private var jenisLayanan: String = ""
     private var jenisHewanRg: String = "Anjing"
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel.getHasilGrooming().observe(this){
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        viewModel.getHasilGrooming().observe(requireActivity()) {
             actionBtnTambah(it)
         }
     }
@@ -37,6 +41,7 @@ class MainFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMainBinding.inflate(layoutInflater, container, false)
+        setHasOptionsMenu(true)
 
         val rasAnjingSpinner: Spinner = binding.spinnerRasAnjing
         ArrayAdapter.createFromResource(
@@ -270,5 +275,20 @@ class MainFragment: Fragment() {
         binding.namaHewanInp.setText("")
         binding.warnaHewanInp.setText("")
         binding.beratHewanInp.setText("")
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_histori -> {
+                findNavController().navigate(R.id.action_mainFragment_to_historiFragment)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
