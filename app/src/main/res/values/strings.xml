@@ -77,5 +77,8 @@
     <string name="durasi_detail">Durasi</string>
     <string name="biaya_detail">Biaya</string>
     <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template">ID: %1$s\nTanggal: %2$s\nNama pelanggan: %3$s\nNama hewan: %4$s
+        \nJenis hewan: %5$s\nRas: %6$s\nBerat: %7$s Kg\nJenis layanan: %8$s\nDurasi: %9$s menit
+        \nBiaya: Rp %10$s</string>
 
 </resources>
