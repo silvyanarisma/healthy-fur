@@ -16,7 +16,7 @@ import org.d3if0074.healthyfur.model.hasilGrooming
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DetailFragment: Fragment() {
+class DetailFragment : Fragment() {
     private val args: DetailFragmentArgs by navArgs()
 
     private val viewModel: DetailViewModel by lazy {
@@ -28,7 +28,8 @@ class DetailFragment: Fragment() {
     private var historiEntity: HistoriEntity? = null
     private lateinit var binding: FragmentDetailBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDetailBinding.inflate(layoutInflater, container, false)
         setHasOptionsMenu(true)
@@ -95,7 +96,9 @@ class DetailFragment: Fragment() {
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
         if (shareIntent.resolveActivity(
-                requireActivity().packageManager) != null) {
+                requireActivity().packageManager
+            ) != null
+        ) {
             startActivity(shareIntent)
         }
     }

@@ -3,7 +3,6 @@ package org.d3if0074.healthyfur.ui.main
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import org.d3if0074.healthyfur.db.HistoriDao
-import org.d3if0074.healthyfur.ui.histori.HistoriViewModel
 
 class MainViewModelFactory(
     private val db: HistoriDao

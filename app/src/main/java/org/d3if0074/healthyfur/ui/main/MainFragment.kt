@@ -15,7 +15,7 @@ import org.d3if0074.healthyfur.databinding.FragmentMainBinding
 import org.d3if0074.healthyfur.db.HealthyFurDb
 import org.d3if0074.healthyfur.model.HasilGrooming
 
-class MainFragment: Fragment() {
+class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
 
     private val viewModel: MainViewModel by lazy {
@@ -36,7 +36,8 @@ class MainFragment: Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMainBinding.inflate(layoutInflater, container, false)
         setHasOptionsMenu(true)
@@ -69,11 +70,11 @@ class MainFragment: Fragment() {
         binding.btnBatal.setOnClickListener { actionBtnBatal() }
 
         binding.radioGroupJenis.setOnCheckedChangeListener { _, _ ->
-            if(binding.rbAnjing.isChecked() == true){
+            if (binding.rbAnjing.isChecked() == true) {
                 binding.spinnerRasAnjing.setVisibility(View.VISIBLE)
                 binding.spinnerRasKucing.setVisibility(View.INVISIBLE)
                 jenisHewanRg = "Anjing"
-            }else if(binding.rbKucing.isChecked() == true){
+            } else if (binding.rbKucing.isChecked() == true) {
                 binding.spinnerRasKucing.setVisibility(View.VISIBLE)
                 binding.spinnerRasAnjing.setVisibility(View.INVISIBLE)
                 jenisHewanRg = "Kucing"
@@ -81,9 +82,9 @@ class MainFragment: Fragment() {
             setHasil()
         }
 
-        rasKucingSpinner.selectedAnjing {  }
-        rasAnjingSpinner.selectedKucing {  }
-        jenisLayananSpinner.selectedLayanan {  }
+        rasKucingSpinner.selectedAnjing { }
+        rasAnjingSpinner.selectedKucing { }
+        jenisLayananSpinner.selectedLayanan { }
         return binding.root
     }
 
@@ -136,13 +137,27 @@ class MainFragment: Fragment() {
             Toast.makeText(context, R.string.jenis_layanan_invalid, Toast.LENGTH_LONG).show()
             return
         }
-        viewModel.setHasilGrooming(namaPelanggan, namaHewan, jenisHewanRg, beratHewan, jenisLayanan, durasi, biaya, ras)
+        viewModel.setHasilGrooming(
+            namaPelanggan,
+            namaHewan,
+            jenisHewanRg,
+            beratHewan,
+            jenisLayanan,
+            durasi,
+            biaya,
+            ras
+        )
     }
 
-    private fun Spinner.selectedAnjing(action: (position:Int) -> Unit) {
+    private fun Spinner.selectedAnjing(action: (position: Int) -> Unit) {
         this.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
                 action(position)
                 val getRasAnjing = parent?.getItemAtPosition(position).toString()
                 ras = getRasAnjing
@@ -150,10 +165,15 @@ class MainFragment: Fragment() {
         }
     }
 
-    private fun Spinner.selectedKucing(action: (position:Int) -> Unit) {
+    private fun Spinner.selectedKucing(action: (position: Int) -> Unit) {
         this.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
                 action(position)
                 val getRasKucing = parent?.getItemAtPosition(position).toString()
                 ras = getRasKucing
@@ -161,10 +181,15 @@ class MainFragment: Fragment() {
         }
     }
 
-    private fun Spinner.selectedLayanan(action: (position:Int) -> Unit) {
+    private fun Spinner.selectedLayanan(action: (position: Int) -> Unit) {
         this.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
                 action(position)
                 val getLayanan = parent?.getItemAtPosition(position).toString()
                 jenisLayanan = getLayanan
@@ -173,7 +198,7 @@ class MainFragment: Fragment() {
         }
     }
 
-    private fun setHasil(){
+    private fun setHasil() {
         val selectedId = binding.radioGroupJenis.checkedRadioButtonId
         val isDog = selectedId == R.id.rbAnjing
 

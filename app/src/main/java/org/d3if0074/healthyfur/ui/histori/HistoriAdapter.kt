@@ -34,11 +34,17 @@ class HistoriAdapter(
     companion object {
         private val DIFF_CALLBACK =
             object : DiffUtil.ItemCallback<HistoriEntity>() {
-                override fun areItemsTheSame(oldData: HistoriEntity, newData: HistoriEntity): Boolean {
+                override fun areItemsTheSame(
+                    oldData: HistoriEntity,
+                    newData: HistoriEntity
+                ): Boolean {
                     return oldData.id == newData.id
                 }
 
-                override fun areContentsTheSame(oldData: HistoriEntity, newData: HistoriEntity): Boolean {
+                override fun areContentsTheSame(
+                    oldData: HistoriEntity,
+                    newData: HistoriEntity
+                ): Boolean {
                     return oldData == newData
                 }
             }
@@ -69,7 +75,7 @@ class HistoriAdapter(
             layananTextView.text = hasilTransaksi.jenisLayanan
             biayaTextView.text = hasilTransaksi.biaya.toString()
 
-            val colorRes = when(hasilTransaksi.jenisHewan) {
+            val colorRes = when (hasilTransaksi.jenisHewan) {
                 "Anjing" -> {
                     jenisHewanTextView.text = "A"
                     R.color.dog
@@ -81,13 +87,20 @@ class HistoriAdapter(
             }
             val circleBg = jenisHewanTextView.background as GradientDrawable
             circleBg.setColor(ContextCompat.getColor(root.context, colorRes))
-            binding.deleteButton.setOnClickListener { deleteData(item.id, item.namaHewan, view.context) }
+            binding.deleteButton.setOnClickListener {
+                deleteData(
+                    item.id,
+                    item.namaHewan,
+                    view.context
+                )
+            }
             binding.detailButton.setOnClickListener { navigationStart(item.id) }
             getNavigation().observe(fragmentHistori.viewLifecycleOwner) {
                 if (it == null) {
                     return@observe
                 }
-                fragmentHistori.findNavController().navigate(HistoriFragmentDirections.actionHistoriFragmentToDetailFragment(it))
+                fragmentHistori.findNavController()
+                    .navigate(HistoriFragmentDirections.actionHistoriFragmentToDetailFragment(it))
                 navigationEnd()
             }
         }

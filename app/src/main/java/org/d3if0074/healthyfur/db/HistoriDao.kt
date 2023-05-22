@@ -21,8 +21,8 @@ interface HistoriDao {
     fun clearAllData()
 
     @Query("DELETE FROM histori WHERE id=:id")
-    fun clearData(id:Long)
+    fun clearData(id: Long)
 
     @Query("SELECT * FROM histori WHERE id=:id")
-    fun getHistoriById(id:Long): LiveData<HistoriEntity>
+    fun getHistoriById(id: Long): LiveData<HistoriEntity>
 }

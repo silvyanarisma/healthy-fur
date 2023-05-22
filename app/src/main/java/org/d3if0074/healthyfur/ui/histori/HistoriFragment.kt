@@ -19,7 +19,7 @@ import org.d3if0074.healthyfur.db.HealthyFurDb
 import org.d3if0074.healthyfur.db.SettingDataStore
 import org.d3if0074.healthyfur.db.dataStore
 
-class HistoriFragment: Fragment() {
+class HistoriFragment : Fragment() {
     private val layoutDataStore: SettingDataStore by lazy {
         SettingDataStore(requireContext().dataStore)
     }
@@ -36,7 +36,8 @@ class HistoriFragment: Fragment() {
 
     private var isLinearLayout = true
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHistoriBinding.inflate(layoutInflater, container, false)
         setHasOptionsMenu(true)
@@ -102,6 +103,7 @@ class HistoriFragment: Fragment() {
         else
             GridLayoutManager(context, 2)
     }
+
     private fun setIcon(menuItem: MenuItem) {
         val iconId = if (isLinearLayout)
             R.drawable.baseline_grid_view_24
