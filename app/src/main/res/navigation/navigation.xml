@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="org.d3if0074.healthyfur.ui.main.MainFragment"
-        android:label="MainFragment"
+        android:label="Healthy Fur"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_historiFragment"
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/historiFragment"
         android:name="org.d3if0074.healthyfur.ui.histori.HistoriFragment"
-        android:label="HistoriFragment"
+        android:label="Histori"
         tools:layout="@layout/fragment_histori" >
         <action
             android:id="@+id/action_historiFragment_to_detailFragment"
@@ -26,7 +26,7 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="org.d3if0074.healthyfur.ui.detail.DetailFragment"
-        android:label="DetailFragment"
+        android:label="Detail Histori"
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="idHistori"
