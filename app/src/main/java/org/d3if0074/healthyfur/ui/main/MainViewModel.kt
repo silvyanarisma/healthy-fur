@@ -37,6 +37,10 @@ class MainViewModel(
         } }
     }
 
+    fun clearHasilGrooming() {
+        hasilGrooming.value = null
+    }
+
     fun getJenisLayanan(layanan: String, isDog: Boolean): JenisLayanan {
         var jenisLayanan: JenisLayanan = JenisLayanan("", "", 0, 0)
         if (isDog == true) {

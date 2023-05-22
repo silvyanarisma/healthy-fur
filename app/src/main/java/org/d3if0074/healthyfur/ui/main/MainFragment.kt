@@ -14,8 +14,6 @@ import org.d3if0074.healthyfur.R
 import org.d3if0074.healthyfur.databinding.FragmentMainBinding
 import org.d3if0074.healthyfur.db.HealthyFurDb
 import org.d3if0074.healthyfur.model.HasilGrooming
-import org.d3if0074.healthyfur.ui.histori.HistoriViewModel
-import org.d3if0074.healthyfur.ui.histori.HistoriViewModelFactory
 
 class MainFragment: Fragment() {
     private lateinit var binding: FragmentMainBinding
@@ -88,64 +86,6 @@ class MainFragment: Fragment() {
         jenisLayananSpinner.selectedLayanan {  }
         return binding.root
     }
-
-//    private fun tambahTransaksi() {
-//        val namaPelanggan = binding.namaPelangganInp.text.toString()
-//        if (TextUtils.isEmpty(namaPelanggan)) {
-//            Toast.makeText(this.requireContext(), R.string.nama_pelanggan_invalid, Toast.LENGTH_LONG).show()
-//            return
-//        }
-//        binding.tvResNamaPelanggan.text = getString(R.string.nama_pelanggan_x, namaPelanggan)
-//
-//        val nomorTelepon = binding.nomorTeleponInp.text.toString()
-//        if (TextUtils.isEmpty(nomorTelepon)) {
-//            Toast.makeText(this.requireContext(), R.string.nomor_telepon_invalid, Toast.LENGTH_LONG).show()
-//            return
-//        }
-//
-//        val namaHewan = binding.namaHewanInp.text.toString()
-//        if (TextUtils.isEmpty(namaHewan)) {
-//            Toast.makeText(this.requireContext(), R.string.nama_hewan_invalid, Toast.LENGTH_LONG).show()
-//            return
-//        }
-//        binding.tvResNamaHewan.text = getString(R.string.nama_hewan_x, namaHewan)
-//
-//        val jenisHewan = binding.radioGroupJenis.checkedRadioButtonId
-//        if (jenisHewan == -1) {
-//            Toast.makeText(this.requireContext(), R.string.jenis_hewan_invalid, Toast.LENGTH_LONG).show()
-//            return
-//        }
-//        binding.tvResJenisHewan.text = getString(R.string.jenis_hewan_x, jenisHewanRg)
-//
-//        if (TextUtils.isEmpty(ras)) {
-//            Toast.makeText(this.requireContext(), R.string.ras_invalid, Toast.LENGTH_LONG).show()
-//            return
-//        }
-//
-//        val warnaHewan = binding.warnaHewanInp.text.toString()
-//        if (TextUtils.isEmpty(warnaHewan)) {
-//            Toast.makeText(this.requireContext(), R.string.warna_invalid, Toast.LENGTH_LONG).show()
-//            return
-//        }
-//
-//        val beratHewan = binding.beratHewanInp.text.toString()
-//        if (TextUtils.isEmpty(beratHewan)) {
-//            Toast.makeText(this.requireContext(), R.string.berat_hewan_invalid, Toast.LENGTH_LONG).show()
-//            return
-//        }
-//        binding.tvResBeratHewan.text = getString(R.string.berat_hewan_x, beratHewan)
-//
-//        if (TextUtils.isEmpty(jenisLayanan)) {
-//            Toast.makeText(this.requireContext(), R.string.jenis_layanan_invalid, Toast.LENGTH_LONG).show()
-//            return
-//        }
-//        binding.tvResLayanan.text = getString(R.string.jenis_layanan_x, jenisLayanan)
-//
-//        binding.tvBiaya.text = getString(R.string.biaya_x, biaya.toString())
-//        binding.tvDurasi.text = getString(R.string.durasi_x, durasi.toString())
-//
-//        actionBtnTambah()
-//    }
 
     private fun tambahTransaksi() {
         val namaPelanggan = binding.namaPelangganInp.text.toString()
@@ -275,6 +215,7 @@ class MainFragment: Fragment() {
         binding.namaHewanInp.setText("")
         binding.warnaHewanInp.setText("")
         binding.beratHewanInp.setText("")
+        viewModel.clearHasilGrooming()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
