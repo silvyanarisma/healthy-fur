@@ -18,6 +18,19 @@
         android:id="@+id/historiFragment"
         android:name="org.d3if0074.healthyfur.ui.histori.HistoriFragment"
         android:label="HistoriFragment"
-        tools:layout="@layout/fragment_histori" />
+        tools:layout="@layout/fragment_histori" >
+        <action
+            android:id="@+id/action_historiFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="org.d3if0074.healthyfur.ui.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="idHistori"
+            app:argType="long" />
+    </fragment>
 
 </navigation>

@@ -70,4 +70,12 @@
     <string name="hapus">Hapus</string>
     <string name="konfirmasi_hapus_item">Hapus histori %1$s?</string>
 
+    //Untuk layout detail
+    <string name="title_detail">Detail Transaksi</string>
+    <string name="id_detail">ID</string>
+    <string name="tanggal_detail">Tanggal</string>
+    <string name="durasi_detail">Durasi</string>
+    <string name="biaya_detail">Biaya</string>
+    <string name="bagikan">Bagikan</string>
+
 </resources>

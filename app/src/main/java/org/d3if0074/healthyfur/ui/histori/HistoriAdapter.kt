@@ -6,6 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +26,9 @@ import org.d3if0074.healthyfur.model.hasilGrooming
 import java.text.SimpleDateFormat
 import java.util.*
 
-class HistoriAdapter :
+class HistoriAdapter(
+    val fragmentHistori: Fragment
+) :
     ListAdapter<HistoriEntity, HistoriAdapter.ViewHolder>(DIFF_CALLBACK) {
 
     companion object {
@@ -47,15 +53,16 @@ class HistoriAdapter :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(getItem(position), holder.itemView)
+        holder.bind(getItem(position), holder.itemView, fragmentHistori)
     }
 
     class ViewHolder(
         private val binding: ItemHistoriBinding
     ) : RecyclerView.ViewHolder(binding.root) {
+        private val navigation = MutableLiveData<Long?>()
         private val dateFormatter = SimpleDateFormat("dd MMMM yyyy", Locale("id", "ID"))
 
-        fun bind(item: HistoriEntity, view: View) = with(binding) {
+        fun bind(item: HistoriEntity, view: View, fragmentHistori: Fragment) = with(binding) {
             val hasilTransaksi = item.hasilGrooming()
             tanggalTextView.text = dateFormatter.format(Date(item.tanggal))
             namaHewanTextView.text = hasilTransaksi.namaHewan
@@ -75,6 +82,14 @@ class HistoriAdapter :
             val circleBg = jenisHewanTextView.background as GradientDrawable
             circleBg.setColor(ContextCompat.getColor(root.context, colorRes))
             binding.deleteButton.setOnClickListener { deleteData(item.id, item.namaHewan, view.context) }
+            binding.detailButton.setOnClickListener { navigationStart(item.id) }
+            getNavigation().observe(fragmentHistori.viewLifecycleOwner) {
+                if (it == null) {
+                    return@observe
+                }
+                fragmentHistori.findNavController().navigate(HistoriFragmentDirections.actionHistoriFragmentToDetailFragment(it))
+                navigationEnd()
+            }
         }
 
         private fun deleteData(id: Long, namaHewan: String, context: Context) {
@@ -94,5 +109,15 @@ class HistoriAdapter :
                 }
                 .show()
         }
+
+        fun navigationStart(idHistori: Long) {
+            navigation.value = idHistori
+        }
+
+        fun navigationEnd() {
+            navigation.value = null
+        }
+
+        fun getNavigation(): LiveData<Long?> = navigation
     }
 }

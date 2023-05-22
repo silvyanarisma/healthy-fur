@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/idDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/id_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tanggalDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/tanggal_detail"
+        app:layout_constraintStart_toStartOf="@id/idDetailTv"
+        app:layout_constraintTop_toBottomOf="@id/idDetailTv" />
+
+    <TextView
+        android:id="@+id/namaPelangganDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/nama_pelanggan"
+        app:layout_constraintStart_toStartOf="@id/tanggalDetailTv"
+        app:layout_constraintTop_toBottomOf="@id/tanggalDetailTv" />
+
+    <TextView
+        android:id="@+id/namaHewanDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/nama_hewan"
+        app:layout_constraintStart_toStartOf="@id/namaPelangganDetailTv"
+        app:layout_constraintTop_toBottomOf="@id/namaPelangganDetailTv" />
+
+    <TextView
+        android:id="@+id/jenisHewanDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/jenis_hewan"
+        app:layout_constraintStart_toStartOf="@id/namaHewanDetailTv"
+        app:layout_constraintTop_toBottomOf="@id/namaHewanDetailTv" />
+
+    <TextView
+        android:id="@+id/rasDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/ras"
+        app:layout_constraintStart_toStartOf="@id/jenisHewanDetailTv"
+        app:layout_constraintTop_toBottomOf="@id/jenisHewanDetailTv" />
+
+    <TextView
+        android:id="@+id/beratDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/berat_hewan_kg"
+        app:layout_constraintStart_toStartOf="@id/rasDetailTv"
+        app:layout_constraintTop_toBottomOf="@id/rasDetailTv" />
+
+    <TextView
+        android:id="@+id/jenisLayananDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/jenis_layanan"
+        app:layout_constraintStart_toStartOf="@id/beratDetailTv"
+        app:layout_constraintTop_toBottomOf="@id/beratDetailTv" />
+
+    <TextView
+        android:id="@+id/durasiDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/durasi_detail"
+        app:layout_constraintStart_toStartOf="@id/jenisLayananDetailTv"
+        app:layout_constraintTop_toBottomOf="@id/jenisLayananDetailTv" />
+
+    <TextView
+        android:id="@+id/biayaDetailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/biaya_detail"
+        app:layout_constraintStart_toStartOf="@id/durasiDetailTv"
+        app:layout_constraintTop_toBottomOf="@id/durasiDetailTv" />
+
+    <TextView
+        android:id="@+id/idDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="16dp"
+        tools:text="ID"
+        app:layout_constraintStart_toEndOf="@id/namaPelangganDetailTv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tanggalDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Tanggal"
+        app:layout_constraintStart_toStartOf="@id/idDetailTvX"
+        app:layout_constraintTop_toBottomOf="@id/idDetailTvX" />
+
+    <TextView
+        android:id="@+id/namaPelangganDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Nama pelanggan"
+        app:layout_constraintStart_toStartOf="@id/tanggalDetailTvX"
+        app:layout_constraintTop_toBottomOf="@id/tanggalDetailTvX" />
+
+    <TextView
+        android:id="@+id/namaHewanDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Nama hewan"
+        app:layout_constraintStart_toStartOf="@id/namaPelangganDetailTvX"
+        app:layout_constraintTop_toBottomOf="@id/namaPelangganDetailTvX" />
+
+    <TextView
+        android:id="@+id/jenisHewanDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Jenis hewan"
+        app:layout_constraintStart_toStartOf="@id/namaHewanDetailTvX"
+        app:layout_constraintTop_toBottomOf="@id/namaHewanDetailTvX" />
+
+    <TextView
+        android:id="@+id/rasDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Ras"
+        app:layout_constraintStart_toStartOf="@id/jenisHewanDetailTvX"
+        app:layout_constraintTop_toBottomOf="@id/jenisHewanDetailTvX" />
+
+    <TextView
+        android:id="@+id/beratDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Berat"
+        app:layout_constraintStart_toStartOf="@id/rasDetailTvX"
+        app:layout_constraintTop_toBottomOf="@id/rasDetailTvX" />
+
+    <TextView
+        android:id="@+id/jenisLayananDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Jenis layanan"
+        app:layout_constraintStart_toStartOf="@id/beratDetailTvX"
+        app:layout_constraintTop_toBottomOf="@id/beratDetailTvX" />
+
+    <TextView
+        android:id="@+id/durasiDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Durasi"
+        app:layout_constraintStart_toStartOf="@id/jenisLayananDetailTvX"
+        app:layout_constraintTop_toBottomOf="@id/jenisLayananDetailTvX" />
+
+    <TextView
+        android:id="@+id/biayaDetailTvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Biaya"
+        app:layout_constraintStart_toStartOf="@id/durasiDetailTvX"
+        app:layout_constraintTop_toBottomOf="@id/durasiDetailTvX" />
+
+    <Button
+        android:id="@+id/bagikanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/bagikan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/biayaDetailTv"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
