@@ -81,4 +81,6 @@
         \nJenis hewan: %5$s\nRas: %6$s\nBerat: %7$s Kg\nJenis layanan: %8$s\nDurasi: %9$s menit
         \nBiaya: Rp %10$s</string>
 
+    <string name="switch_layout">Ubah tampilan</string>
+
 </resources>

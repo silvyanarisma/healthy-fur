@@ -8,4 +8,10 @@
         android:title="@string/hapus_histori"
         app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/action_switch_layout"
+        android:icon="@drawable/baseline_grid_view_24"
+        android:title="@string/switch_layout"
+        app:showAsAction="always" />
+
 </menu>
