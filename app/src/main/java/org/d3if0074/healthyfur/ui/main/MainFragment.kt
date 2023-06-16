@@ -254,6 +254,10 @@ class MainFragment : Fragment() {
                 findNavController().navigate(R.id.action_mainFragment_to_historiFragment)
                 return true
             }
+            R.id.menu_layanan -> {
+                findNavController().navigate(R.id.action_mainFragment_to_layananFragment)
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
     }

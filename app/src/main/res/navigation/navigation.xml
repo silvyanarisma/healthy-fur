@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_historiFragment"
             app:destination="@id/historiFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_layananFragment"
+            app:destination="@id/layananFragment" />
     </fragment>
     <fragment
         android:id="@+id/historiFragment"
@@ -32,5 +35,10 @@
             android:name="idHistori"
             app:argType="long" />
     </fragment>
+    <fragment
+        android:id="@+id/layananFragment"
+        android:name="org.d3if0074.healthyfur.ui.layanan.LayananFragment"
+        android:label="@string/jenis_layanan"
+        tools:layout="@layout/fragment_layanan"/>
 
 </navigation>

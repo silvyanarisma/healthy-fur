@@ -7,5 +7,10 @@
         android:icon="@drawable/baseline_history_24"
         android:title="@string/histori"
         app:showAsAction="ifRoom" />
-    
+
+    <item
+        android:id="@+id/menu_layanan"
+        android:icon="@drawable/baseline_info_24"
+        android:title="@string/jenis_layanan"
+        app:showAsAction="ifRoom" />
 </menu>
