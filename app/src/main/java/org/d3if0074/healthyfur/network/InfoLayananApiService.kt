@@ -33,3 +33,5 @@ object InfoLayananApi {
         return "$BASE_URL$gambar.png"
     }
 }
+
+enum class ApiStatus { LOADING, SUCCESS, FAILED }
