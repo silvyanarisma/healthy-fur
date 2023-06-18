@@ -86,5 +86,7 @@
     <string name="deskripsi_layanan">Grooming yang dikhususkan untuk hewan yang memiliki masalah dengan jamur di badannya.</string>
     <string name="message">%1$s diklik!</string>
     <string name="koneksi_error">Koneksi error</string>
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data info jenis layanan otomatis</string>
 
 </resources>
