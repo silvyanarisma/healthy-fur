@@ -82,5 +82,8 @@
         \nBiaya: Rp %10$s</string>
 
     <string name="switch_layout">Ubah tampilan</string>
+    <string name="nama_layanan">Grooming Jamur</string>
+    <string name="deskripsi_layanan">Grooming yang dikhususkan untuk hewan yang memiliki masalah dengan jamur di badannya.</string>
+    <string name="message">%1$s diklik!</string>
 
 </resources>
